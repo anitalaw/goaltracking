@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Take home challenge w/ Firebase</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+    <!-- Using specifically the firestore db -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>
+    <script src="secret.json"></script>
+
+</head>
+
+<body>
+
+<button id="logout">Logout</button><br>
+
+    <h1>Goal Tracking</h1>
+    <h3>Create goals</h3>
+        <form id="add-goal">
+            <input type="text" name="goal" placeholder="Goal">
+            <select name="timeframes">
+                <option value="short_term">Short-term</option>
+                <option value="mid_term">Mid-term</option>
+                <option value="long_term">Long-term</option>
+            </select>
+            <button>Add goal</button>
+        </form>
+
+    <h3>Current goals</h3>
+    <ul id="list-goals"></ul>
+
+    <h3>Completed goals</h3>
+    <ul id="done-goals"></ul>
+
+    
+    <script src="app.js"></script>
+    <script src="scripts/auth.js"></script>
+</body>
+
+</html>
